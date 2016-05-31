@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Access Solutions - Sales</title>
+
+		<!-- favicon -->
+		<link href="assets/img/favicon.ico" rel="icon" type="image/x-icon">
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+		<!-- style.css -->
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!-- Jquery -->
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+		<!-- AngularJS -->
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular-route/angular-route.min.js"></script>
+
+		<!-- MoltinJS -->
+		<script src="assets/js/vendor/moltin.min.js"></script>
+	</head>
+	<body ng-app="accessSolutionsStore">
+		<div class="container">
+			<div class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#/"><img src="assets/img/logo.jpg"></a>
+					</div><!-- End of navbar-header -->
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#/sidewalk-sheds"><span class="nav-item">Sidewalk Shed</span></a></li>
+							<li><a data-toggle="collapse" data-target=".navbar-collapse.in "href="#/frames-scaffold"><span class="nav-item">Frames Scaffold</span></a></li>
+							<li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#/safety"><span class="nav-item">Safety</span></a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#"><span class="nav-item">0</span> <span class="glyphicon glyphicon-shopping-cart"></span><span class="nav-item">Cart</span></a></li>
+						</ul>
+					</div><!-- End of collapse navbar-collapse -->
+				</div><!-- End of container-fluid -->
+			</div><!-- End of navbar navbar-default -->
+		</div><!-- End of container -->
+
+		<div ng-view></div>
+		
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<p>Copyright &copy; 2016</p>
+					<p>Access Solutions Group</p>
+				</div><!-- End of row -->
+			</div><!-- End of container -->
+		</div><!-- End of footer -->
+		
+		<!-- Bootstrap -->
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+		<!-- Angular Scripts -->
+		<script src="assets/js/app.js"></script>
+		<script src="assets/js/services/moltin.js"></script>
+		<script src="assets/js/controllers/MainCtrl.js"></script>
+		<script src="assets/js/controllers/SidewalkShedsCtrl.js"></script>
+		<script src="assets/js/controllers/FramesScaffoldCtrl.js"></script>
+		<script src="assets/js/controllers/SafetyCtrl.js"></script>
+	</body>
+</html>

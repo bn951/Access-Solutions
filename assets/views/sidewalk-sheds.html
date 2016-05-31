@@ -1,0 +1,25 @@
+<div id="banner02">
+	<h1 id="banner-text-2">{{ pageTitle }}</h1>
+</div><!-- End of banner -->
+
+<div id="content">
+	<div class="container">
+		<div class="row">
+			<div class="page-header">
+				<h2>Sidewalk Sheds</h2>
+			</div><!-- End of page-header -->
+		</div><!-- End of row -->
+		<div class="row">
+			<div class="col-sm-6 col-md-4" ng-repeat="product in products">
+				<div class="thumbnail">
+					<img ng-src="{{ product.images[0].url.https }}">
+					<div class="caption">
+						<h3><a href="#">{{ product.title }}</a></h3>
+						<p>{{ product.description }}</p>
+						<p><strong>{{ product.price.data.formatted.without_tax }}</strong></p>
+					</div><!-- End of caption -->
+				</div><!-- End of thumbnail -->
+			</div><!-- End of col-sm-6 col-md-4 -->
+		</div><!-- End of row -->
+	</div><!-- End of container -->
+</div><!-- End of content -->

@@ -41,12 +41,34 @@ accessSolutionsStore.config(function($routeProvider) {
 		// Frames Scaffold Category Page
 		.when('/frames-scaffold', {
 			templateUrl: 'assets/views/frames-scaffold.html',
-			controller: 'FramesScaffoldCtrl'
+			controller: 'FramesScaffoldCtrl',
+			resolve: {
+				products: function($q, MoltinAuth) {
+					var deferred = $q.defer();
+					$q.when(MoltinAuth).then(function(moltin) {
+						moltin.Product.List({category: '1261905927515144372'}, function(products) {
+							deferred.resolve(products);
+						});
+					});
+					return deferred.promise;
+				}
+			}
 		})
 
 		// Safety Category Page
 		.when('/safety', {
 			templateUrl: 'assets/views/safety.html',
-			controller: 'SafetyCtrl'
+			controller: 'SafetyCtrl',
+			resolve: {
+				products: function($q, MoltinAuth) {
+					var deferred = $q.defer();
+					$q.when(MoltinAuth).then(function(moltin) {
+						moltin.Product.List({category: '1261906199306043573'}, function(products) {
+							deferred.resolve(products);
+						});
+					});
+					return deferred.promise;
+				}
+			}
 		});
 });
